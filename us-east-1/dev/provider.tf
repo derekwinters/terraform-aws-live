@@ -6,6 +6,10 @@ terraform {
       source  = "hashicorp/aws"
       version = "< 4.0"
     }
+    time = {
+      source  = "hashicorp/time"
+      version = "< 2"
+    }
   }
 }
 
@@ -18,3 +22,5 @@ provider "aws" {
     provisioner  = "terraform"
   }
 }
+
+provider "time" { }
